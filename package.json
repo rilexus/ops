@@ -2,12 +2,14 @@
   "name": "ops",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "bootstrap": "npx lerna bootstrap --hoist",
-    "start": "npx lerna run start --parallel --scope frontend --scope backend",
-    "start:frontend": "lerna run start --scope frontend --stream",
-    "start:backend": "lerna run start --scope backend --stream"
+    "build:backend": "npx lerna run build --scope backend --stream",
+    "build:frontend": "npx lerna run build --scope frontend --stream",
+    "build": "npx lerna run --parallel build",
+    "start:frontend": "npm lerna run start --scope frontend --stream",
+    "start:backend": "npx lerna run start --scope backend --stream",
+    "start": "npx lerna run start --parallel --scope frontend --scope backend"
   },
   "workspaces": [
     "packages/*"

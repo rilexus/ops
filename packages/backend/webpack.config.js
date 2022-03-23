@@ -33,7 +33,7 @@ module.exports = ({ development, production }) => {
     },
     output: {
       path: path.resolve(__dirname, BUILD_FOLDER),
-      filename: "bundle.js",
+      filename: "index.js",
     },
 
     plugins: [
