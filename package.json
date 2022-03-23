@@ -10,7 +10,7 @@
     "start:frontend": "yarn workspace @ops/frontend run start",
     "start:backend": "yarn workspace @ops/backend run start",
     "start": "yarn workspaces start",
-    "start:prod": "yarn workspace foreach run start:prod"
+    "start:prod": "yarn workspaces foreach run start:prod"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
