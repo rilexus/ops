@@ -1,0 +1,17 @@
+{
+  "name": "@ops/types",
+  "version": "1.0.0",
+  "description": "",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "scripts": {
+    "tsc:watch": "tsc --watch",
+    "build": "tsc --project ./tsconfig.json",
+    "start": "npm run tsc:watch"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
