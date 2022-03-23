@@ -18,14 +18,10 @@ const BUILD_FOLDER = "dist/public";
 
 const getENV = () => {
   return Object.entries(process.env).reduce((e, [key, value]) => {
-    if (key.startsWith("ENV_")) {
-      const k = key.split("ENV_")[1];
-      return {
-        ...e,
-        [k]: value,
-      };
-    }
-    return e;
+    return {
+      ...e,
+      [key]: values,
+    };
   }, {});
 };
 
