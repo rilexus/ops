@@ -86,6 +86,11 @@ module.exports = ({ development, production }) => {
       filename: "bundle.js",
     },
     devServer: {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+      },
       static: {
         directory: path.join(__dirname, "public"),
       },
@@ -93,7 +98,7 @@ module.exports = ({ development, production }) => {
       historyApiFallback: true,
       compress: true,
       hot: true,
-      port: 4200,
+      port: 3000,
     },
 
     plugins: [

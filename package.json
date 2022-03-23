@@ -9,7 +9,7 @@
     "deploy": "yarn workspaces foreach run deploy",
     "start:frontend": "yarn workspace @ops/frontend run start",
     "start:backend": "yarn workspace @ops/backend run start",
-    "start": "yarn workspaces start",
+    "start": "yarn run start:frontend & yarn run start:backend",
     "start:prod": "yarn workspaces foreach run start:prod"
   },
   "devDependencies": {

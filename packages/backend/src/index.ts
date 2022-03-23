@@ -10,11 +10,13 @@ const port = PORT;
 app.use(cors())
 
 app.get("/", (req: any, res: any) => {
-  const user: USER = {};
+  const user: USER = {
+    name: 'Some'
+  };
 
-  res.send("Hello World.");
+  res.json(user);
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Backend app listening on port ${port}`);
 });

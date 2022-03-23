@@ -5,7 +5,7 @@ const App = () => {
 
   useEffect(() => {
     (async () => {
-      await fetch(API)
+      const user = await (await fetch(API)).json();
     })()
   }, [])
   return <div>some</div>;
