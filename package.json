@@ -1,0 +1,38 @@
+{
+  "name": "ops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "npx lerna bootstrap --hoist",
+    "start": "npx lerna run start --parallel --scope frontend --scope backend",
+    "start:frontend": "lerna run start --scope frontend --stream",
+    "start:backend": "lerna run start --scope backend --stream"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0",
+    "typescript": "^4.6.2",
+    "webpack": "^5.70.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "@types/jest": "^27.4.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.4.1",
+    "fork-ts-checker-webpack-plugin": "^6.5.0",
+    "@babel/preset-typescript": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/core": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/runtime": "^7.16.5",
+    "babel-loader": "^8.2.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

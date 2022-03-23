@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "dist",
+    "docs",
+    "node_modules",
+    "webpack.config.ts",
+    "site"
+  ]
+}

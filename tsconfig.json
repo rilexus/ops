@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "strict": true,
+    "baseUrl": "."
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "exclude": ["**/*.spec.ts", "**/*.test.ts", "node_modules"]
+}
