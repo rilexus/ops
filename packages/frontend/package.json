@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:prod": "",
+    "start:prod": "node dist/index.js",
     "start": "webpack serve --config webpack.config.js --env development",
     "build": "webpack --config webpack.config.js --env production"
   },
@@ -41,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
     "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^10.2.4",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
     "history": "5",

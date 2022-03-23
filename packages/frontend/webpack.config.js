@@ -6,10 +6,15 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 //eslint-disable-next-line
 const { EnvironmentPlugin, ProvidePlugin } = require("webpack");
+
+//eslint-disable-next-line
+const CopyPlugin = require("copy-webpack-plugin");
+
 //eslint-disable-next-line
 require("dotenv").config({ path: "../../.env" });
 
-const BUILD_FOLDER = "dist";
+
+const BUILD_FOLDER = "dist/public";
 
 const getENV = () => {
   return Object.entries(process.env).reduce((e, [key, value]) => {
@@ -96,6 +101,11 @@ module.exports = ({ development, production }) => {
     },
 
     plugins: [
+      new CopyPlugin({
+        patterns: [
+          { from: "./server.js", to: "../index.js" },
+        ],
+      }),
       new ProvidePlugin({
         Buffer: ["buffer", "Buffer"],
       }),
