@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "preinstall": "npm run bootstrap",
-    "bootstrap": "npx lerna bootstrap --hoist",
-    "build:backend": "npx lerna run build --scope backend --stream",
-    "build:frontend": "npx lerna run build --scope frontend --stream",
-    "build": "npx lerna run --parallel build",
-    "deploy": "npx lerna run --parallel deploy",
-    "start:frontend": "npm lerna run start --scope frontend --stream",
-    "start:backend": "npx lerna run start --scope backend --stream",
-    "start": "npx lerna run start --parallel --scope frontend --scope backend",
-    "start:prod": "npx lerna run start:prod"
+    "postinstall": "npm run bootstrap",
+    "bootstrap": "lerna bootstrap --hoist",
+    "build:backend": "lerna run build --scope backend --stream",
+    "build:frontend": "lerna run build --scope frontend --stream",
+    "build": "lerna run --parallel build",
+    "deploy": "lerna run --parallel deploy",
+    "start:frontend": "lerna run start --scope frontend --stream",
+    "start:backend": "lerna run start --scope backend --stream",
+    "start": "lerna run start --parallel --scope frontend --scope backend",
+    "start:prod": "lerna run start:prod --stream"
   },
   "workspaces": [
     "packages/*"
