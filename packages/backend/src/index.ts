@@ -6,7 +6,7 @@ const app = express();
 const port = PORT;
 
 app.get("/", (req: any, res: any) => {
-  res.send("Hello World!!");
+  res.send("Hello World.");
 });
 
 app.listen(port, () => {
