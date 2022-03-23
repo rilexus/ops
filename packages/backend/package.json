@@ -7,9 +7,9 @@
     "node": "16.x"
   },
   "scripts": {
-    "deploy": "npm run build && node dist/index.js",
     "build": "webpack --config webpack.config.js --env production",
-    "start": "nodemon ./src/index.ts"
+    "start": "nodemon ./src/index.ts",
+    "start:prod": "node dist/index.js"
   },
   "dependencies": {
     "body-parser": "^1.19.2",
