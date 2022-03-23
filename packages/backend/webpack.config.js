@@ -23,9 +23,6 @@ module.exports = ({ development, production }) => {
     },
     resolve: {
       alias: {
-        "@env": path.resolve(__dirname, "src/env.ts"),
-        "@libs": path.resolve(__dirname, "src/libs"),
-        "@libs/": path.resolve(__dirname, "src/libs/"),
         "@utils": path.resolve(__dirname, "src/utils"),
         "@utils/": path.resolve(__dirname, "src/utils/"),
       },

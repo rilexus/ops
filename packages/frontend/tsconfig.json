@@ -3,9 +3,21 @@
   "compilerOptions": {
     "composite": true,
     "outDir": "dist",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@utils": ["utils"],
+      "@utils/*": ["utils/*"],
+      "@hooks": ["hooks"],
+      "@hooks/*": ["hooks/*"],
+      "@libs": ["libs"],
+      "@libs/*": ["libs/*"],
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@icons": ["icons"],
+      "@icons/*": ["icons/*"]
+    },
   },
   "include": ["src/**/*"],
   "exclude": [

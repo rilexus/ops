@@ -3,7 +3,11 @@
   "compilerOptions": {
     "composite": true,
     "outDir": "dist",
-    "baseUrl": "."
+    "baseUrl": "src",
+    "paths": {
+      "@utils": ["utils"],
+      "@utils/*": ["utils/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": [
