@@ -20,7 +20,7 @@ const getENV = () => {
   return Object.entries(process.env).reduce((e, [key, value]) => {
     return {
       ...e,
-      [key]: values,
+      [key]: value,
     };
   }, {});
 };
