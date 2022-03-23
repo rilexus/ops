@@ -36,7 +36,7 @@ module.exports = ({ development, production }) => {
   console.log("========");
   console.log(mode);
   return {
-    entry: ["@babel/polyfill", "./src/index.tsx"],
+    entry: ["./src/index.tsx"],
     mode,
     module: {
       rules: [
