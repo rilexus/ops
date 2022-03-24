@@ -7,8 +7,11 @@ import { API } from "../env";
 const Home: NextPage = () => {
   useEffect(() => {
     (async () => {
-      const user: USER = await fetch(API);
-      console.log(user);
+      fetch(API)
+        .then((res) => res.json())
+        .then((user: USER) => {
+          console.log(user);
+        });
     })();
   }, []);
 

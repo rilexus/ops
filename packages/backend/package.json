@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "webpack --config webpack.config.js --env production",
-    "start": "nodemon ./src/index.ts",
-    "start:prod": "node dist/index.js"
+    "dev": "nodemon ./src/index.ts",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@ops/types": "1.0.0",
