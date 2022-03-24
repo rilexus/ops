@@ -1,32 +1,20 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "composite": true,
-    "outDir": "dist",
-    "baseUrl": "src",
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "react-jsx",
-    "paths": {
-      "@utils": ["utils"],
-      "@utils/*": ["utils/*"],
-      "@hooks": ["hooks"],
-      "@hooks/*": ["hooks/*"],
-      "@libs": ["libs"],
-      "@libs/*": ["libs/*"],
-      "@components": ["components"],
-      "@components/*": ["components/*"],
-      "@icons": ["icons"],
-      "@icons/*": ["icons/*"]
-    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
   },
-  "include": ["src/**/*"],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts",
-    "dist",
-    "docs",
-    "node_modules",
-    "webpack.config.ts",
-    "site"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
